@@ -14,8 +14,6 @@ services:
       - cache
       - inference_model_server
     restart: always
-    ports:
-      - "8080:8080"
     environment:
       # Auth Settings
       - AUTH_TYPE=${AUTH_TYPE:-disabled}
