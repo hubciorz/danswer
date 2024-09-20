@@ -62,6 +62,7 @@ services:
       - QA_PROMPT_OVERRIDE=${QA_PROMPT_OVERRIDE:-}
       # Other services
       - POSTGRES_HOST=relational_db
+      - POSTGRES_PORT=54322
       - VESPA_HOST=index
       - REDIS_HOST=cache
       - WEB_DOMAIN=${WEB_DOMAIN:-} # For frontend redirect auth purpose
@@ -139,6 +140,7 @@ services:
       - QA_PROMPT_OVERRIDE=${QA_PROMPT_OVERRIDE:-}
       # Other Services
       - POSTGRES_HOST=relational_db
+      - POSTGRES_PORT=54322
       - POSTGRES_USER=${POSTGRES_USER:-}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-}
       - POSTGRES_DB=${POSTGRES_DB:-}
@@ -293,7 +295,7 @@ services:
       - POSTGRES_USER=${POSTGRES_USER:-postgres}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-password}
     ports:
-      - "5432:5432"
+      - "54322:5432"
     volumes:
       - db_volume:/var/lib/postgresql/data
 
